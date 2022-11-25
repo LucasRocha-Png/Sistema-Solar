@@ -70,5 +70,4 @@ space.create_planet(name="Neptune",
                     color=(54, 104, 150))                      
 
                
-
 space.create_universe()
