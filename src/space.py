@@ -108,7 +108,7 @@ class Space(Planet):
 
 
     #Configurate our universe -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-    def universe(self, size:tuple, color:tuple = (0,0,0)) -> None:
+    def config(self, size:tuple, color:tuple = (0,0,0)) -> None:
         #Checkers -
         rgb_color_checker(color)
         pos_checker(size)
