@@ -33,7 +33,16 @@ class Planet:
         rgb_color_checker(color)
         #-
         
-        self.planets[len(self.planets)] = {"Name": name, "Planet Radius": planet_radius, "Orbit Radius": orbit_radius, "Color": color, "Velocity": velocity, "x_pos": 0, "y_os":0, "Circule Orbit Radius": 180}
+        self.planets[len(self.planets)] = {
+                                           "Name": name,
+                                           "Planet Radius": planet_radius,
+                                           "Orbit Radius": orbit_radius,
+                                           "Color": color,
+                                           "Velocity": velocity,
+                                           "x_pos": 0, #pre defined
+                                           "y_os":0, #pre defined
+                                           "Circule Orbit Radius": 0 #pre defined
+                                           }
 
     #Make the function that plot the planets -=
     def update_planets_pos(self) -> None:
@@ -93,6 +102,10 @@ class Space(Planet):
     #Pre configurate our universe if we dont set the configurations
     def __init__(self, fps:int = 60) -> None:  
         super().__init__() 
+        
+        #Checkers -
+        int_checker(fps, "FPS")
+        #-
     
         #Screen
         self.x = 1000
